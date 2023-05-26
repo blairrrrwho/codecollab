@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# <Your-Project-Title>
 
-## Available Scripts
+## Description
+Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-In the project directory, you can run:
+- What was your motivation?
+- Why did you build this project? 
+- What problem does it solve?
+- What did you learn?
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Features](#features)
+- [Technologies](#technologies)
+- [License](#license)
+- [Tests](#tests)
+- [Credits](#credits)
+- [Contribution](#how-to-contribute)
+- [Contact / Questions](#contact--questions)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Installation
+No installation required -- this is a web-based application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Usage (Instructions/How-To Use)
+Provide instructions and examples for use. Include screenshots as needed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment
+Live URL: <a href="deployed link">Deployment Link</a>
+<!-- in the parentheses is just the relative path to the screenshot-->
+![alt text](assets/images/screenshot.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Features
+If your project has a lot of features, list them here.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies
+JavaScript, HTML, CSS, Node.js, Express.js, MySQL, Java, C, C#, C++, Python, Other, N/A
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## License
+The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT license. For more information about this license and what it entails, visit the MIT website <a href="https://opensource.org/licenses/MIT">here</a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Preview:
 
-### Code Splitting
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-### Analyzing the Bundle Size
+    THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Tests
+Endpoints were tested with Insomnia, If you should find any issues, see above on contibuting guidlines, or submit a issue with a detailed explanation on how to recreate the bug.
+Go the extra mile and write tests for your application. Then provide examples on how to run them here.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Credits
+List your collaborators, if any, with links to their GitHub profiles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
-### Deployment
+If you followed tutorials, include links to those here as well.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## How to Contribute
+Fork the repo and clone down to your local machine. Once you have the latest version of the repo, you can add or make changes then submit a pull request for your changes. Please use best practices as well as proper naming conventions and comments depicting what the code segements function is. Finally in the body of your pull request, please explain why these changes you were necissary and if it is a bug what steps can be completed to reproduce this bug. If these guidelines are not met, pull requests will not be reviewed or accepted.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+
+
+## Contact / Questions
+If you liked this project and want to see more, feel free to check out my other repos [here](https://github.com/blairrrrwho).  
+For any questions or inquiries, you can reach me at blair10324@gmail.com for further information.    
+
+
+<li><strong><a href="https://github.com/blairrrrwho" target="_blank">Blair Millet</a>:</strong> Full-Stack Developer</li>  
+
+- - - - 
+© 2023 Another Bad Music Review, Inc. All Rights Reserved.
