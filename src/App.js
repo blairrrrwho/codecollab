@@ -1,10 +1,12 @@
 import './App.css';
+import Nav from './components/Nav'
 
 function App() {
   return (
-    <h1 className='text-3xl font-bold underline text-green-700'>
-      Hello Group 7!
-    </h1>
+    <>
+    <Nav />
+    <div className='bg-yellow-800 w-full h-screen'></div>
+    </>
   );
 }
 
