@@ -27,4 +27,6 @@ yarn-error.log*
 
 # Dependency directories
 node_modules/
+node_modules
 jspm_packages/
+package-lock.json
