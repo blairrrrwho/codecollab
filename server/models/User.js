@@ -8,12 +8,10 @@ const userSchema = new Schema(
       required: true
 
     },
-
     lastname: {
       type: String,
       required: true
     },
-    
     username: {
       type: String,
       required: true,
