@@ -2,6 +2,8 @@ import './App.css';
 import Nav from './components/Nav'
 import Footer from './components/Footer';
 import Postform from './components/Postform';
+// import SignUp from './components/SignUp';
+// import Login from './components/Login';
 
 
 function App() {
