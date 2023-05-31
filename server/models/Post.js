@@ -1,33 +1,13 @@
-// const Comment = require("./Comment");
-
-// const {Schema, model} = require('mongoose');
-
-// const PostSchema = new Schema({
-//     postText: {
-//         type: String, 
-//         required: true,
-//         min: 1,
-//         max: 250,
-//     },
-//     username: {
-//         type: String,
-//         required: true
-
-//     },
-//     comments: [Comment.schema] //indicates that any comments will be subdocuments 
-    
-// })
-
 const { Schema, model } = require('mongoose');
 
 
-const reactionSchema = new Schema(
+const commentSchema = new Schema(
   {
-    reactionId: {
+    commentId: {
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId()
     },
-    reactionBody: {
+    commentBody: {
       type: String,
       required: true,
       maxLength: 280,
@@ -49,9 +29,9 @@ const reactionSchema = new Schema(
   }
 );
 
-const thoughtSchema = new Schema(
+const postSchema = new Schema(
   {
-    thoughtText: {
+    postText: {
       type: String,
       required: true,
       minLength: 1,
@@ -65,7 +45,7 @@ const thoughtSchema = new Schema(
       type: String,
       required: true
     },
-    reactions: [reactionSchema],
+    comments: [commentSchema],
   },
   {
     toJSON: {
@@ -76,10 +56,10 @@ const thoughtSchema = new Schema(
   }
 );
 
-thoughtSchema.virtual('reactionCount').get(function () {
+postSchema.virtual('commentCount').get(function () {
   return this.reactions.length;
 })
 
-const Thought = model('Thought', thoughtSchema);
+const Post = model('Post', postSchema);
 
-module.exports = Thought;
+module.exports = Post;
