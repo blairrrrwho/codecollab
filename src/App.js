@@ -1,5 +1,6 @@
 import './App.css';
 import Nav from './components/Nav'
+import Postcard from './components/Postcard';
 import Footer from './components/Footer';
 import Postform from './components/Postform';
 // import SignUp from './components/SignUp';
@@ -9,10 +10,11 @@ import Postform from './components/Postform';
 function App() {
   return (
     <>
+    <div className='flex flex-col h-screen'>
     <Nav />
-
+    <Postcard />
     <div className='bg-yellow-800 w-full h-screen'>
-      <Postform />
+    <Postform />
     </div>
       <Footer></Footer>
     </>
