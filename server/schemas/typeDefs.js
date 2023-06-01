@@ -5,9 +5,16 @@ const typeDefs = gql`
     type Post {
         _id: ID
         postText: String
-        createdAt: String
+        createdAt: Date
         username: String
         comments: [commentSchema]
+    }
+
+    type Comment {
+        _id: ID
+        commentBody: String
+        createdAt: Date
+        username: String
     }
 
     type User {
