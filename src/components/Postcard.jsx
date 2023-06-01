@@ -50,7 +50,7 @@ const Postcard = () => {
         <p>{expanded ? article : truncatedArticle}</p>
         <div className="flex flex-row justify-between">
           <p className="mt-16 text-gray-400">{readingTime} minute read</p>
-          <p className="mt-16 text-extrabold underline" onClick={toggleExpand}>
+          <p className="mt-16 text-extrabold underline cursor-pointer hover:text-gray-400" onClick={toggleExpand}>
             {expanded ? 'X' : 'EXPAND'}
           </p>
         </div>
