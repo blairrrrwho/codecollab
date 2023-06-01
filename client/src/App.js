@@ -12,7 +12,7 @@ export default function App() {
   const [currentTab, handleTabChange] = useState("Home");
 
   useEffect(() => {
-    document.title = `Aaron Dreyer | ${currentTab}`;
+    document.title = `CodeCollab | ${currentTab}`;
   }, [currentTab]);
 
   const renderTab = () => {
