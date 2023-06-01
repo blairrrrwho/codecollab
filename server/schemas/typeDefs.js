@@ -1,11 +1,12 @@
 const { gql } = require("apollo-server-express");
 
-// imported schema dummy files from my challenge 21; will have to rework the code 
 const typeDefs = gql`
+    scaler DateTime
+    
     type Post {
         _id: ID
         postText: String
-        createdAt: Date
+        createdAt: DateTime!      
         username: String
         comments: [commentSchema]
     }
@@ -13,7 +14,7 @@ const typeDefs = gql`
     type Comment {
         _id: ID
         commentBody: String
-        createdAt: Date
+        createdAt: DateTime!
         username: String
     }
 
