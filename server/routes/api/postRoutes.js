@@ -1,4 +1,7 @@
 const router = require('express').Router();
+
+//get all posts
+router.get("/",)
 const {
     getThoughts,
     getThoughtById,
