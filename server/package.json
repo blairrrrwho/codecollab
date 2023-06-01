@@ -1,23 +1,26 @@
 {
-    "name": "googlebooks-app",
+    "name": "codecollab-server",
     "version": "1.0.0",
     "description": "",
-    "main": "server/server.js",
+    "main": "server.js",
     "scripts": {
-      "start": "node server/server.js",
-      "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-      "build": "cd client && npm run build"
+        "start": "node server.js",
+        "watch": "nodemon server.js",
+        "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+        "build": "cd client && npm run build"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-      "concurrently": "^5.1.0"
+        "concurrently": "^5.1.0",
+        "nodemon": "^2.0.22"
     },
     "dependencies": {
-      "apollo-server-express": "^3.11.1",
-      "mongoose": "7.2.1",
-      "express": "^4.17.1"
-
+        "apollo-server-express": "^3.11.1",
+        "bcrypt": "^5.1.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "7.2.1"
     }
-  }
+}
