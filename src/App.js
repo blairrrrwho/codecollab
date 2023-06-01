@@ -17,6 +17,7 @@ function App() {
     <Postform />
     </div>
       <Footer></Footer>
+    </div>
     </>
   );
 }
