@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { capitalizeFirstLetter } from '../utils/helpers';
+import Button from './Button';
 
 export default function Nav(props) {
   const { currentTab, handleTabChange } = props;
@@ -26,8 +27,8 @@ export default function Nav(props) {
             <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
           </div>
         </div>
-        <ul className={`md:flex ${open ? 'block' : 'hidden'}`}>
-          <li>
+        <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'block' : 'hidden'}`}>
+          <li className="inline-block ml-4">
             <a
               href="#Home"
               onClick={() => handleTabChange('Home')}
@@ -35,10 +36,13 @@ export default function Nav(props) {
                 currentTab === 'Home' ? 'nav-link active' : 'nav-link'
               }`}
             >
-              Home
+              <Button>Home</Button>
+              
             </a>
+            
           </li>
-          <li>
+          <li className="inline-block ml-4">
+          
             <a
               href="#About"
               onClick={() => handleTabChange('About')}
@@ -46,11 +50,12 @@ export default function Nav(props) {
                 currentTab === 'About' ? 'nav-link active' : 'nav-link'
               }`}
             >
-              About
+              <Button>About</Button>
             </a>
+            
           </li>
         </ul>
-      </div>
+        </div>
     </nav>
   );
 }
