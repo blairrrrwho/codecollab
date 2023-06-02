@@ -1,15 +1,16 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User } = require("../models");
+const { Post } = require("../models");
 const { signToken } = require("../utils/auth");
 
 // imported schema dummy files from my challenge 21; will have to rework the code 
 const resolvers = {
     Query: {
-        users: async () => {
-            return User.find();
+        posts: async () => {
+            return Post.find();
         },
-        user: async (parent, { userId }) => {
-            return User.findOne({ _id: userId });
+        post: async (parent, { postId }) => {
+            return Post.findOne({ _id: postId });
         },
     },
     Mutation: {
