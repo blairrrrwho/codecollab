@@ -6,8 +6,8 @@ export default function LandingPage() {
     
     <div className="w-full h-screen bg-yellow-500">
     <div className="h-screen flex items-center justify-center">
-      <div className="h-5/6 w-5/6 rounded overflow-hidden shadow-lg bg-white">
-        <img className="mx-auto" src={codeImage} alt="Test" />
+      <div className="h-5/6 w-5/6 rounded-lg overflow-hidden shadow-2xl shadow-black bg-white">
+        <img className="mt-4 mx-auto" src={codeImage} alt="Test" />
         <div className="px-6 py-4 flex flex-col justify-center items-center">
           <div className="font-bold text-xl mb-2">
           <div className='font-bold text-2xl cursor-pointer flex items-center font-[Monospace]
@@ -28,11 +28,11 @@ export default function LandingPage() {
             The process of coding requires a unique mindset. It demands attention to detail, patience, and a willingness to tackle challenges head-on. It involves breaking down complex problems into smaller, more manageable components and designing elegant solutions. Coding is like solving a puzzle, where every line of code contributes to the bigger picture.
           </p>
         </div>
-        <div className="px-6 py-4 flex justify-center">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+        <div className="py-4 flex justify-center">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-8">
             Login
           </button>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-8">
             Sign Up
           </button>
         </div>
@@ -41,6 +41,9 @@ export default function LandingPage() {
     </div>
   );
 }
+
+
+
 
 
 
