@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('./config/connection');
-const routes = require('./routes');
+// const routes = require('./routes');
 
 const { ApolloServer } = require('apollo-server-express');
 const { authMiddleware } = require('./utils/auth')
@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(routes);
+// app.use(routes);
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {

@@ -1,30 +1,30 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-    scaler DateTime
+    
     
     type Post {
         _id: ID
         postText: String
-        createdAt: DateTime!      
+        createdAt: String!      
         username: String
-        comments: [comments]!
+        comments: [Post]
     }
 
     type Comment {
         _id: ID
         commentBody: String
-        createdAt: DateTime!
+        createdAt: String!
         username: String
     }
 
     type User {
         _id: ID
-        firstname: String
-        lastname: String
-        username: String
-        email: String
-        password: String
+        firstname: String!
+        lastname: String!
+        username: String!
+        email: String!
+        password: String!
     }
 
     type Auth {
@@ -33,9 +33,8 @@ const typeDefs = gql`
     }
 
     type Query {
-        users: [User]!
+        users: [User]
         user(userId: ID!): User
-        posts(userId: ID!): [Post]
         posts(username: String): [Post]
         post(postId: ID!): Post
         
