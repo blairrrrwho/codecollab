@@ -1,24 +1,30 @@
 const { gql } = require("apollo-server-express");
 
-// imported schema dummy files from my challenge 21; will have to rework the code 
 const typeDefs = gql`
-    type Book {
-        _id: String
-        authors: [String]
-        description: String
-        bookId: String
-        image: String
-        link: String
-        title: String
+    
+    
+    type Post {
+        _id: ID
+        postText: String
+        createdAt: String!      
+        username: String
+        comments: [Post]
+    }
+
+    type Comment {
+        _id: ID
+        commentBody: String
+        createdAt: String!
+        username: String
     }
 
     type User {
         _id: ID
-        firstname: String
-        lastname: String
-        username: String
-        email: String
-        password: String
+        firstname: String!
+        lastname: String!
+        username: String!
+        email: String!
+        password: String!
     }
 
     type Auth {
@@ -27,8 +33,11 @@ const typeDefs = gql`
     }
 
     type Query {
-        users: [User]!
+        users: [User]
         user(userId: ID!): User
+        posts(username: String): [Post]
+        post(postId: ID!): Post
+        
     }
 
     type Mutation {
