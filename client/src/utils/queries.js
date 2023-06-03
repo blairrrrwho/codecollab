@@ -14,8 +14,8 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_POSTS = gql`
-  query post($_id: String) {
-    post(_id: $_id) {
+  query post($username: String) {
+    post(username: $username) {
       _id
       postText
       createdAt
@@ -30,3 +30,4 @@ export const QUERY_POSTS = gql`
     }
   }
 `;
+
