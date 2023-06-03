@@ -14,10 +14,15 @@ const resolvers = {
         },
     },
     Mutation: {
-        addUser: async (parent, { username, email, password }) => {
-            const user = await User.create({ username, email, password });
+        addUser: async (parent, { firstname, lastname, username, email, password }) => {
+            const user = await User.create({ firstname, lastname, username, email, password });
             const token = signToken(user);
             return { token, user };
+        },
+        addPost: async (parent, { postText, username }) => {
+            const post = await Post.create({ postText, username });
+            console.log(post);
+            return post;
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
@@ -31,31 +36,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addBook: async (
-            parent,
-            { userId, authors, description, bookId, image, link, title }
-        ) => {
-            const book = {
-                authors,
-                description,
-                bookId,
-                image,
-                link,
-                title,
-            };
-            console.log(book);
 
-            return User.findOneAndUpdate(
-                { _id: userId },
-                {
-                    $addToSet: { savedBooks: book },
-                },
-                {
-                    new: true,
-                    runValidators: true,
-                }
-            );
-        },
         removeUser: async (parent, { userId }) => {
             return User.findOneAndDelete({ _id: userId });
         },
