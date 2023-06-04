@@ -32,6 +32,21 @@ const resolvers = {
             console.log(post);
             return post;
         },
+        addComment: async(parent, {postId, commentBody, username}) => {
+            try {
+                const post = await Post.findById(postId); //find the specific post
+
+                const newComment = {commentBody, username};
+                post.comments.push(newComment);
+
+                await post.save();
+
+                return post;
+            }
+            catch (err) {
+                console.log(err);
+            }
+        },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
             if (!user) {
@@ -44,7 +59,6 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-
         removeUser: async (parent, { userId }) => {
             return User.findOneAndDelete({ _id: userId });
         },
