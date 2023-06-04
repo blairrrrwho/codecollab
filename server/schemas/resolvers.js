@@ -27,8 +27,8 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addPost: async (parent, { postText, username }) => {
-            const post = await Post.create({ postText, username });
+        addPost: async (parent, { postTitle, postText, username }) => {
+            const post = await Post.create({ postTitle, postText, username });
             console.log(post);
             return post;
         },
