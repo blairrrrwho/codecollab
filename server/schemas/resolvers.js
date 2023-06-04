@@ -13,7 +13,7 @@ const resolvers = {
             return Post.findOne({ _id: postId });
         },
         postsByUser: async(parent, {username}) => {
-            return Post.findOne({ username: username });
+            return Post.find({ username: username });
         }
     },
     Mutation: {
