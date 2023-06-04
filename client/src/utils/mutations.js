@@ -21,3 +21,14 @@ export const CREATE_VOTE = gql`
     }
   }
 `;
+
+export const ALL_POSTS = gql`
+query AllPosts {
+  allPosts {
+    _id
+    createdAt
+    postText
+    username
+  }
+}
+`

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useQuery } from '@apollo/client';
 import Avatar from 'boring-avatars';
+import { ALL_POSTS } from '../utils/queries';
 
 const TruncatedText = ({ text, maxLength }) => {
   if (text.length <= maxLength) {
@@ -17,6 +19,8 @@ const getReadingTime = (article) => {
 
 const Postcard = () => {
   const [expanded, setExpanded] = useState(false);
+
+  const { loading, data } = useQuery(ALL_POSTS);
 
   const article =
     "React JS is a widely used JavaScript library for building user interfaces. Whether you're a beginner or an experienced developer, having access to quality React JS resources is essential for mastering this framework. From official documentation and tutorials to online courses, blogs, and forums, there's no shortage of learning materials. The React JS ecosystem is rich with tools and libraries, such as React Router for navigation, Redux for state management, and Styled Components for styling. Stay updated with the latest trends and best practices by following influential React JS experts and attending virtual conferences. Happy coding!";
