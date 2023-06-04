@@ -6,12 +6,15 @@ const { signToken } = require("../utils/auth");
 // imported schema dummy files from my challenge 21; will have to rework the code 
 const resolvers = {
     Query: {
-        posts: async () => {
+        allPosts: async () => {
             return Post.find();
         },
-        post: async (parent, { postId }) => {
+        postById: async (parent, { postId }) => {
             return Post.findOne({ _id: postId });
         },
+        postsByUser: async(parent, {username}) => {
+            return Post.findOne({ username: username });
+        }
     },
     Mutation: {
         addUser: async (parent, { firstname, lastname, username, email, password }) => {
