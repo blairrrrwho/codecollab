@@ -14,6 +14,12 @@ const resolvers = {
         },
         postsByUser: async(parent, {username}) => {
             return Post.find({ username: username });
+        },
+        allUsers: async() => {
+            return User.find();
+        },
+        userById: async(parent, { userId }) => {
+            return User.findOne({_id: userId });
         }
     },
     Mutation: {
