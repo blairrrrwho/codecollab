@@ -3,7 +3,6 @@ const { User } = require("../models");
 const { Post } = require("../models");
 const { signToken } = require("../utils/auth");
 
-// imported schema dummy files from my challenge 21; will have to rework the code 
 const resolvers = {
     Query: {
         allPosts: async () => {
