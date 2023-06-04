@@ -1,0 +1,43 @@
+[
+    {
+        "firstname": "Donald",
+        "lastname": "Glover",
+        "username": "dglovs2000",
+        "email": "dgloverdagreatest@gmail.com",
+        "password": "iamthegreatest"
+
+    },
+    {
+        "firstname": "Jerry",
+        "lastname": "Jones",
+        "username": "gocowboys65",
+        "email": "jerryjones@gmail.com",
+        "password": "oilmoneyrocks"
+
+    },
+    {
+        "firstname": "Vermin",
+        "lastname": "Supreme",
+        "username": "iloveamerica",
+        "email": "anarchy99@gmail.com",
+        "password": "poniesforeveryone!2"
+
+    },
+    {
+        "firstname": "Test",
+        "lastname": "Tester",
+        "username": "test99",
+        "email": "thisisatest@gmail.com",
+        "password": "donttestmebich"
+
+    }
+
+
+
+
+
+
+
+
+
+]
