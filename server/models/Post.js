@@ -31,6 +31,12 @@ const commentSchema = new Schema(
 
 const postSchema = new Schema(
   {
+    postTitle:{
+      type: String, 
+      required: true,
+      minLength: 1,
+      maxLength: 30,
+    },
     postText: {
       type: String,
       required: true,
