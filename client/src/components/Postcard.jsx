@@ -48,7 +48,7 @@ const Postcard = () => {
                 <span className="w-16 h-16 mt-4 mr-8 z-10">
                   <Avatar
                     size={60}
-                    name="Maria Mitchell"
+                    name={post.username}
                     variant="beam"
                     colors={["#C1DDC7", "#F5E8C6", "#BBCD77", "#DC8051", "#F4D279"]}
                   />
