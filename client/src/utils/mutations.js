@@ -1,11 +1,12 @@
 import { gql } from '@apollo/client';
 
-export const CREATE_MATCHUP = gql`
-  mutation createMatchup($tech1: String!, $tech2: String!) {
-    createMatchup(tech1: $tech1, tech2: $tech2) {
+export const ADD_COMMENT = gql`
+  mutation AddComment($postId: ID!, $commentBody: String!, $username: String!) {
+    addComment(postId: $postId, commentBody: $commentBody, username: $username) {
       _id
-      tech1
-      tech2
+      postText
+      postTitle
+      createdAt
     }
   }
 `;
