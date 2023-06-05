@@ -36,7 +36,8 @@ const resolvers = {
         addComment: async(parent, {postId, commentBody, username}) => {
             try {
                 const post = await Post.findById(postId); //find the specific post
-                const createdAt = new Date().toLocaleString();
+                // const createdAt = new Date().toLocaleString();
+                const newComment = {postId, commentBody, username}
                 post.comments.push(newComment);
 
                 await post.save();
