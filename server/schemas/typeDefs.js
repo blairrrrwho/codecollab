@@ -8,7 +8,7 @@ const typeDefs = gql`
         postText: String
         createdAt: String!      
         username: String
-        comments: [Post]
+        comments: [Comment]
     }
 
     type Comment {
