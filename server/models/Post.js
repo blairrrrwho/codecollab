@@ -18,13 +18,10 @@ const commentSchema = new Schema(
       required: true,
     },
     createdAt: {
-      type: {
-        type: Date,
-        default: Date.now,
-        get: (timestamp) => dateFormat(timestamp),
-      },
-      default: Date.now
-    }
+      type: Date,
+      default: Date.now,
+      get: (timestamp) => dateFormat(timestamp),
+    },
   },
   {
     toJSON: {
@@ -49,12 +46,9 @@ const postSchema = new Schema(
       maxLength: 280,
     },
     createdAt: {
-      type: {
-        type: Date,
-        default: Date.now,
-        get: (timestamp) => dateFormat(timestamp),
-      },
-      default: Date.now
+      type: Date,
+      default: Date.now,
+      get: (timestamp) => dateFormat(timestamp),
     },
     username: {
       type: String,
