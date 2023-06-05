@@ -11,18 +11,6 @@ export const ADD_COMMENT = gql`
   }
 `;
 
-export const CREATE_VOTE = gql`
-  mutation createVote($_id: String!, $techNum: Int!) {
-    createVote(_id: $_id, techNum: $techNum) {
-      _id
-      tech1
-      tech2
-      tech1_votes
-      tech2_votes
-    }
-  }
-`;
-
 export const ALL_POSTS = gql`
 query AllPosts {
   allPosts {
