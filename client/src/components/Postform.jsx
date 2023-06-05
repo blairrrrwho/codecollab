@@ -3,6 +3,7 @@ import Button from './Button';
 
 const Postform = () => {
   return (
+    <div className='bg-yellow-800 w-full h-screen'>
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden ">
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-black lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center text-yellow-700 underline uppercase decoration-solid">
@@ -63,6 +64,7 @@ const Postform = () => {
           <div></div>
         </form>
       </div>
+    </div>
     </div>
   );
 };
