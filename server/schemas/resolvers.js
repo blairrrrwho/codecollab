@@ -3,6 +3,7 @@ const { User } = require("../models");
 const { Post } = require("../models");
 const { signToken } = require("../utils/auth");
 
+
 const resolvers = {
     Query: {
         allPosts: async () => {
@@ -35,8 +36,7 @@ const resolvers = {
         addComment: async(parent, {postId, commentBody, username}) => {
             try {
                 const post = await Post.findById(postId); //find the specific post
-
-                const newComment = {commentBody, username};
+                const createdAt = new Date().toLocaleString();
                 post.comments.push(newComment);
 
                 await post.save();
