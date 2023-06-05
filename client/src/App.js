@@ -12,11 +12,9 @@ function App() {
     <>
     <div className='flex flex-col h-screen'>
     <Nav />
-    <Postcard />
-    <div className='bg-yellow-800 w-full h-screen'>
     <Postform />
-    </div>
-      <Footer></Footer>
+    <Postcard />
+    <Footer />
     </div>
     </>
   );
