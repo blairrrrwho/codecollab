@@ -33,7 +33,7 @@ const Postform = () => {
           </div>
           <div className="mb-2">
             <label>
-              <span class="text-gray-700">What do you want to post?</span>
+              <span className="text-gray-700">What do you want to post?</span>
               <textarea
                 name="message"
                 className="
