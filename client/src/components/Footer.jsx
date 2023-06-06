@@ -12,7 +12,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className='bg-yellow-700 text-white flex w-full h-14 mt-auto fixed bottom-0 left-0'>
+        <footer className='z-20 bg-yellow-700 text-white flex w-full h-14 mt-auto fixed bottom-0 left-0'>
             <div className='bg-yellow-700 text-white flex w-full h-14 items-center justify-center mt-auto fixed bottom-0 left-0'>
                 <h1 className='text-xl ml-1'>Made with</h1>
                 <div className='text-2xl m-1 mt-2'>
@@ -23,7 +23,7 @@ export default function Footer() {
                     <ion-icon name="logo-github"></ion-icon>
                 </div>
             </div>
-            <div className='flex items-center ml-auto z-10' onClick={openModal}>
+            <div className='cursor-pointer flex items-center mr-4 ml-auto z-10' onClick={openModal}>
                 <div className='text-2xl mt-1'>
                     <ion-icon name="code-outline"></ion-icon>
                 </div>
