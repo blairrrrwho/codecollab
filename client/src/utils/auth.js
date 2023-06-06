@@ -4,7 +4,7 @@ import jwt_decode from 'jwt-decode';
 // Create a new class to instantiate for a user
 class AuthService {
   // Get user data
-  getProfile() {
+  getUser() {
     return jwt_decode(this.getToken());
   }
 

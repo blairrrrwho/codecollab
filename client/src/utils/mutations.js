@@ -1,6 +1,10 @@
 import { gql } from '@apollo/client';
 
 
+export const LOGIN_USER = gql`
+
+`;
+
 export const ADD_POST = gql`
 mutation Mutation($postText: String!, $username: String!, $postTitle: String!) {
   addPost(postText: $postText, username: $username, postTitle: $postTitle) {
@@ -15,7 +19,8 @@ mutation Mutation($postText: String!, $username: String!, $postTitle: String!) {
     }
   }
 }
-`
+`;
+
 export const ADD_USER = gql`
 mutation Mutation($firstname: String!, $lastname: String!, $username: String!, $email: String!, $password: String!) {
   addUser(firstname: $firstname, lastname: $lastname, username: $username, email: $email, password: $password) {
@@ -30,7 +35,7 @@ mutation Mutation($firstname: String!, $lastname: String!, $username: String!, $
     }
   }
 }
-`
+`;
 
 export const ADD_COMMENT = gql`
   mutation AddComment($postId: ID!, $commentBody: String!, $username: String!) {
@@ -52,4 +57,4 @@ query AllPosts {
     username
   }
 }
-`
+`;
