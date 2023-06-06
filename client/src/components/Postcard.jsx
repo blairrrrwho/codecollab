@@ -29,7 +29,7 @@ const PostCard = ({ post }) => {
 
   return (
     <div key={post._id} className="bg-yellow-800 w-screen h-screen">
-      <div className="rounded-2xl relative p-6 bg-white mx-4 md:mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl shadow-md text-left mt-32">
+      <div className="rounded-2xl relative p-6 bg-white mx-4 md:mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl shadow-md text-left mb-16">
         <div className="rounded-t-md h-16 w-full bg-yellow-100 absolute top-0 left-0 flex">
           <h2 className="text-2xl text-gray-700 flex-1 mt-6 mx-4">React Resources</h2>
           <div className="flex items-center mt-6 mx-4 text-gray-500 text-sm">
