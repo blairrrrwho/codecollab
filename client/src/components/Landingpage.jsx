@@ -1,25 +1,21 @@
 import React, { useState } from 'react';
-import codeImage from './imgs/placeholder.png'
+import SignUp from './SignUp';
+import Login from './Login'; 
+import cardImage from './imgs/placeholder.png';
+
 
 export default function LandingPage() {
-  const [showSignup, setShowSignup] = useState(false);
 
-  const openSignup = () => {
-    setShowSignup(true);
+  const [showModal, setShowModal] = useState(false);
+  const [formType, setFormType] = useState('login');
+
+  const openModal = (type) => {
+    setShowModal(true);
+    setFormType(type);
   };
 
-  const closeSignup = () => {
-    setShowSignup(false);
-  };
-
-  const [showLogin, setShowLogin] = useState(false);
-
-  const openLogin = () => {
-    setShowLogin(true);
-  };
-
-  const closeLogin = () => {
-    setShowLogin(false);
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -27,7 +23,7 @@ export default function LandingPage() {
     <div className="w-full h-screen bg-yellow-500">
       <div className="h-screen flex items-center justify-center">
         <div className="h-5/6 w-5/6 rounded-lg overflow-hidden shadow-2xl shadow-black bg-white">
-          <img className="mt-4 mx-auto" src={codeImage} alt="Test" />
+          <img className="mt-4 mx-auto" src={cardImage} alt="Test" />
           <div className="px-6 py-4 flex flex-col justify-center items-center">
             <div className="font-bold text-xl mb-2">
               <div className='font-bold text-2xl cursor-pointer flex items-center font-[Monospace]
@@ -49,82 +45,45 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="py-4 flex justify-center">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-8" onClick={openLogin}>
+          <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              onClick={() => openModal('login')}
+            >
               Login
             </button>
-            {showLogin && (
-              <div>
-                <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center">
-                  <div className="w-[600px]">
-                    
-                    <div className="absolute inset-y-0 left-0 flex flex-col items-center justify-center w-screen h-screen text-gray-700">
-
-
-                      <form className="flex flex-col bg-white rounded shadow-lg p-12 mt-12" action="" >
-                      <button className="text-black text-xl place-self-end" onClick={closeLogin}>X</button>
-                      <h1 className="font-bold text-2xl">Welcome Back :)</h1>
-                        <label className="font-semibold text-xs mt-3" for="usernameField">Username or Email</label>
-                        <input className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2" type="text" />
-                        <label className="font-semibold text-xs mt-3" for="passwordField">Password</label>
-                        <input className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2" type="password" />
-                        <button className="flex items-center justify-center h-12 px-6 w-64 bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700">Login</button>
-                        <div className="flex mt-6 justify-center text-xs">
-                          
-                          
-                          
-                        </div>
-                      </form>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-8" onClick={openSignup}>
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-4"
+              onClick={() => openModal('signup')}
+            >
               Sign Up
             </button>
-            {/* signup modal */}
-            {showSignup && (
-              <div>
-                <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center">
-                  <div className="w-[600px]">
-                    {/* this is where the content stuff goes */}
-                    <div className="absolute inset-y-0 left-0 flex flex-col items-center justify-center w-screen h-screen text-gray-700">
-
-
-                      {/* <!-- Component Start --> */}
-                      <form className="flex flex-col bg-white rounded shadow-lg p-12 mt-1" action="" >
-                        <button className="text-black text-xl place-self-end" onClick={closeSignup}>X</button>
-                        <h1 className="font-bold text-2xl">Welcome! :)</h1>
-                        <label className="font-semibold text-xs mt-3" for="usernameField">First Name</label>
-                        <input className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2" type="text" />
-                        <label className="font-semibold text-xs mt-3" for="passwordField">Last Name</label>
-                        <input className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2" type="text" />
-                        <label className="font-semibold text-xs mt-3" for="passwordField">Username</label>
-                        <input className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2" type="text" />
-                        <label className="font-semibold text-xs mt-3" for="passwordField">Email</label>
-                        <input className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2" type="text" />
-                        <label className="font-semibold text-xs mt-3" for="passwordField">Password</label>
-                        <input className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2" type="password" />
-                        <button className="flex items-center justify-center h-12 px-6 w-64 bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700">Sign Up!</button>
-                      </form>
-                      {/* <!-- Component End  --> */}
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-opacity-50 bg-black">
+          <div className="bg-white rounded-lg shadow-lg">
+            <div className="flex justify-end px-6 py-4">
+              <button
+                className="text-gray-500 hover:text-gray-700"
+                onClick={closeModal}
+              >
+                Close
+              </button>
+            </div>
+            <div className="p-6">
+              {formType === 'login' && <Login handleModalClose={closeModal} />}
+              {formType === 'signup' && <SignUp handleModalClose={closeModal} />}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
+          
   );
 }
-
-
-
 
 
 

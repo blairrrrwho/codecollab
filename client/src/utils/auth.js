@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 // Use this to decode a token and get the user's information out of it
 import jwt_decode from 'jwt-decode';
 
