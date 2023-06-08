@@ -4,7 +4,7 @@ import './App.css';
 // import Postcard from './components/Postcard';
 // import Footer from './components/Footer';
 // import Postform from './components/Postform';
-import Test from './pages/Test'
+import Home from './pages/Home'
 import LandingPage from './components/Landingpage';
 import { Routes, Route, } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ function App() {
       
           <Routes>
             <Route path='/' element={<LandingPage/>} />
-            <Route path='/home' element={<Test/>}/>
+            <Route path='/home' element={<Home/>}/>
           </Routes>
    
         </div>
