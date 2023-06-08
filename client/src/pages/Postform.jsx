@@ -7,11 +7,13 @@ import {ADD_POST} from "../../src/utils/mutations"
 const Postform = () => {
 
   const [addPost, { error }] = useMutation(ADD_POST);
+  const [postText, setPosText] = useState('')
+  const [postTitle, setPosTitle] = useState('')
 
   const [userFormData, setUserFormData] = useState({postTitle: '', postText: '' })
 
   const handleFormSubmit = async (event) => {
-    e.preventDefault();
+    event.preventDefault();
     const form = event.currentTarget;
 		if (form.checkValidity() === false) {
 			event.preventDefault();
