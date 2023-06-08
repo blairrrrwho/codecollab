@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Auth from '../utils/auth';
 
 const Nav = () => {
     // let Links = [
@@ -39,7 +40,7 @@ const Nav = () => {
                     </div>
 
                     <button className='bg-rose-700 text-white font-[Monospace] py-2 px-6 rounded md:ml-8 hover:bg-amber-500
-                    duration-500 mr-8 md:ml-8 md:mr-0'>Logout
+                    duration-500 mr-8 md:ml-8 md:mr-0' onClick={Auth.logout}>Logout
                     </button>
                 </ul>
             </div>
