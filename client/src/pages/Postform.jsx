@@ -30,7 +30,7 @@ const Postform = () => {
     try {
       const { data } = await addPost({
         // variables: { username, postTitle, postText },
-        variables: { ...userFormData }
+        variables: { ...userFormData, username }
       }); //how do I get username from the session data? Would it be in the client/src/utils/auth.js file where we decode?
 
       window.location.reload();
