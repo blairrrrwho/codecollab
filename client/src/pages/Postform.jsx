@@ -7,10 +7,16 @@ import {ADD_POST} from "../../src/utils/mutations"
 const Postform = () => {
 
   const [addPost, { error }] = useMutation(ADD_POST);
-  const [postText, setPosText] = useState('')
-  const [postTitle, setPosTitle] = useState('')
+  const [postText, setPostText] = useState('')
+  const [postTitle, setPostTitle] = useState('')
 
   const [userFormData, setUserFormData] = useState({postTitle: '', postText: '' })
+
+  const handleInputChange = (event) => {
+		const { name, value } = event.target;
+		setUserFormData({ ...userFormData, [name]: value });
+	};
+
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -23,13 +29,18 @@ const Postform = () => {
 
     try {
       const { data } = await addPost({
-        variables: { username, postTitle, postText },
+        // variables: { username, postTitle, postText },
+        variables: { ...userFormData }
       }); //how do I get username from the session data? Would it be in the client/src/utils/auth.js file where we decode?
 
       window.location.reload();
     } catch (err) {
       console.error(err);
     }
+    setUserFormData({
+			postText: '',
+			postTitle: '',
+		});
   }
 
 
@@ -41,28 +52,38 @@ const Postform = () => {
         <h1 className="text-2xl font-semibold text-center text-yellow-700 font-[Monospace]">
           Please share your thoughts or resources :)
         </h1>
-        <form className="mt-2">
+        <form className="mt-2" onSubmit={handleFormSubmit}>
           <div className="mb-4">
             <label className="font-[Monospace] font-bold text-gray-700">
               Title
+               </label>
               <input
+                id='postTitle'
                 type="text"
-                name="post title"
+                name="postTitle"
                 className="w-full px-3 py-2 mt-2 border border-gray-300 rounded-md shadow-sm focus:border-yellow-300 focus:ring focus:ring-yellow-200 focus:ring-opacity-50"
                 placeholder="Title of your post"
+                onChange={handleInputChange}
+                value={userFormData.postTitle}
+                required
               />
-            </label>
+           
           </div>
           <div className="mb-4">
             <label className="font-[Monospace] font-bold text-gray-700">
               What do you want to post?
+              </label>
               <textarea
-                name="message"
+                id='postText'
+                name="postText"
                 className="block w-full mt-2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:border-yellow-300 focus:ring focus:ring-yellow-200 focus:ring-opacity-50"
                 rows="5"
                 placeholder="Write something here"
+                onChange={handleInputChange}
+                value={userFormData.postText}
+                required
               ></textarea>
-            </label>
+            
           </div>
 
           <div className="mb-2 flex justify-end">
