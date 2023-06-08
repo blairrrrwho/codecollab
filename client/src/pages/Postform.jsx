@@ -1,7 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
+import Auth from "../utils/auth"
+import { useMutation } from "@apollo/client"
+import {ADD_POST} from "../../src/utils/mutations"
 
 const Postform = () => {
+
+  const [addPost, { error }] = useMutation(ADD_POST);
+
+  const [userFormData, setUserFormData] = useState({postTitle: '', postText: '' })
+
+  const handleFormSubmit = async (event) => {
+    e.preventDefault();
+    const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.preventDefault();
+			event.stopPropagation();
+		}
+    const username = Auth.getUser().data.username
+
+    try {
+      const { data } = await addPost({
+        variables: { username, postTitle, postText },
+      }); //how do I get username from the session data? Would it be in the client/src/utils/auth.js file where we decode?
+
+      window.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+
+
+
   return (
     <div className="bg-yellow-800 flex items-center justify-center">
       <div className="mb-16 mt-32 bg-gradient-to-b from-white from-50% to-yellow-100 drop-shadow-sm w-full p-6 bg-white rounded-md shadow-xl mx-4 md:mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl">
