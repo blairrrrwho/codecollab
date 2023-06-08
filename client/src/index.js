@@ -3,13 +3,32 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ApolloProvider } from '@apollo/react-hooks';
+import ApolloClient from 'apollo-boost';
+import { BrowserRouter } from 'react-router-dom';
+
+const client = new ApolloClient({
+  request: (operation) => {
+    const token = localStorage.getItem("id_token");
+
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : "",
+      },
+    });
+  },
+  uri: "/graphql",
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
+  <ApolloProvider client={client}>
+    <BrowserRouter>
     <React.StrictMode>
       <App />
     </React.StrictMode>
+    </BrowserRouter>
+  </ApolloProvider>
   
 );
 

@@ -3,7 +3,6 @@ const { User } = require("../models");
 const { Post } = require("../models");
 const { signToken } = require("../utils/auth");
 
-
 const resolvers = {
     Query: {
         allPosts: async () => {
@@ -49,6 +48,7 @@ const resolvers = {
             }
         },
         login: async (parent, { email, password }) => {
+
             const user = await User.findOne({ email });
             if (!user) {
                 throw new AuthenticationError("No user with this email found!");
@@ -57,6 +57,7 @@ const resolvers = {
             if (!correctPw) {
                 throw new AuthenticationError("Incorrect password!");
             }
+          
             const token = signToken(user);
             return { token, user };
         },

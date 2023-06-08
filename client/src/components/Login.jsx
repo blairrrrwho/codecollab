@@ -1,28 +1,105 @@
-import React from 'react';
-import Button from './Button';
+import React, { useState } from 'react';
+import Auth from '../utils/auth';
+import { useMutation } from '@apollo/react-hooks';
+import { LOGIN_USER } from '../utils/mutations';
+import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
-    return (
-   <div className="flex flex-col items-center justify-center w-screen h-screen text-gray-700">
+export default function LoginForm() {
+	const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+	const [validated] = useState(false);
+	const [loginUser] = useMutation(LOGIN_USER);
+	const navigate = useNavigate()
 
-	{/* <!-- Component Start --> */}
-	<h1 className="font-bold text-2xl">Welcome Back :)</h1>
-	<form className="flex flex-col bg-white rounded shadow-lg p-12 mt-12" action="" >
-		<label className="font-semibold text-xs" for="usernameField">Username or Email</label>
-		<input className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2" type="text" />
-		<label className="font-semibold text-xs mt-3" for="passwordField">Password</label>
-		<input className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"type="password" />
-		<button className="flex items-center justify-center h-12 px-6 w-64 bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700">Login</button>
-		<div className="flex mt-6 justify-center text-xs">
-			<a className="text-blue-400 hover:text-blue-500" href="#">Forgot Password</a>
-			<span className="mx-2 text-gray-300">/</span>
-			<a className="text-blue-400 hover:text-blue-500" href="#">Sign Up</a>
-		</div>
-	</form>
-	{/* <!-- Component End  --> */}
+	const handleInputChange = (event) => {
+		const { name, value } = event.target;
+		setUserFormData({ ...userFormData, [name]: value });
+	};
 
-   </div>
-    );
+	const handleFormSubmit = async (event) => {
+		event.preventDefault();
+
+		// check if form has everything (as per react-bootstrap docs)
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.preventDefault();
+			event.stopPropagation();
+		}
+
+		try {
+			const { data } = await loginUser({
+				variables: { ...userFormData }
+			});
+
+			Auth.login(data.login.token);
+			navigate("/home")
+		} catch (err) {
+			console.error(err);
+		}
+
+		setUserFormData({
+			email: '',
+			password: '',
+		});
+
+
+	};
+
+	return (
+		<>
+
+			<form noValidate={validated} onSubmit={handleFormSubmit}>
+
+				<div className="mb-4">
+					<label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+						Email
+					</label>
+					<input
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						id="email"
+						type="text"
+						placeholder="Your email"
+						name="email"
+						onChange={handleInputChange}
+						value={userFormData.email}
+						required
+					/>
+					<p className="text-red-500 text-xs italic">Email is required!</p>
+				</div>
+
+				<div className="mb-6">
+					<label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+						Password
+					</label>
+					<input
+						className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+						id="password"
+						type="password"
+						placeholder="******************"
+						name="password"
+						onChange={handleInputChange}
+						value={userFormData.password}
+						required
+					/>
+					<p className="text-red-500 text-xs italic">Password is required!</p>
+				</div>
+
+				<div className="flex items-center justify-between">
+					<button
+						className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+						type="submit"
+					>
+						Submit
+					</button>
+					<a
+						className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+						href="/"
+					>
+						Forgot Password?
+					</a>
+				</div>
+			</form>
+
+		</>
+	);
+
 };
-
-export default Login;

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 // Use this to decode a token and get the user's information out of it
 import jwt_decode from 'jwt-decode';
 
@@ -35,7 +36,7 @@ class AuthService {
   login(idToken) {
     // Saves user token to localStorage
     localStorage.setItem('id_token', idToken);
-    window.location.assign('/');
+    // window.location.assign('/');
   }
 
   logout() {
