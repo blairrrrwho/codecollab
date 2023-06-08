@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient from 'apollo-boost';
+// import { ApolloProvider } from '@apollo/react-hooks';
+// import ApolloClient from 'apollo-boost';
 import { BrowserRouter } from 'react-router-dom';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -18,6 +19,7 @@ const client = new ApolloClient({
     });
   },
   uri: "/graphql",
+  cache: new InMemoryCache
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

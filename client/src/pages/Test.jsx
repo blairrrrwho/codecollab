@@ -8,7 +8,7 @@ export default function Test () {
     return (
         <>
         <Nav />
-        {/* <Postcard /> */}
+        <Postcard />
         <Postform />
         <Footer />
         </>
