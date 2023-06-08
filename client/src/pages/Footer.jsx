@@ -76,6 +76,9 @@ export default function Footer() {
                                 <a href="https://github.com/tlequernaque" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
                                     <ion-icon name="logo-github"></ion-icon>
                                 </a>
+                                <a href="https://www.linkedin.com/in/terry-lequernaque-654158274/" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </a>
                             </li>
                             <li className='flex items-center justify-center space-x-4'>
                                 <p>Blair Millet</p>
