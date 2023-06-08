@@ -4,6 +4,7 @@ import Login from './Login';
 import cardImage from './imgs/placeholder.png';
 
 
+
 export default function LandingPage() {
 
   const [showModal, setShowModal] = useState(false);
