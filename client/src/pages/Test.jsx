@@ -1,9 +1,16 @@
 import React from 'react';
+import Nav from './Nav'
+import Footer from './Footer'
+import Postcard from './Postcard'
+import Postform from './Postform'
 
 export default function Test () {
     return (
-        <div>
-            <h1>Hello This Works!!!</h1>
-        </div>
+        <>
+        <Nav />
+        {/* <Postcard /> */}
+        <Postform />
+        <Footer />
+        </>
     );
 };
