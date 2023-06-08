@@ -63,6 +63,7 @@ const PostCard = ({ post }) => {
 const Postcard = () => {
   const [allPosts, setAllPosts] = useState([]);
 
+  // eslint-disable-next-line no-unused-vars
   const { loading, data } = useQuery(ALL_POSTS, {
     onCompleted: (data) => {
       setAllPosts(data.allPosts);
