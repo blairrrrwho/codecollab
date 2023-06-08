@@ -32,12 +32,18 @@ export const QUERY_POSTS = gql`
 `;
 
 export const ALL_POSTS = gql`
-query AllPosts {
+query allPosts {
   allPosts {
     _id
     createdAt
     postText
+    postTitle
     username
+    comments {
+      _id
+      commentBody
+      createdAt
+      username
+    }
   }
-}
-`
+}`
