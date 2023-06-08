@@ -69,9 +69,11 @@ const Postcard = () => {
     },
   });
 
+  const reversedPosts = allPosts.slice().reverse();
+
   return (
     <>
-      {allPosts.map((post) => (
+      {reversedPosts.map((post) => (
         <PostCard key={post._id} post={post} />
       ))}
     </>
