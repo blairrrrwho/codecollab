@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import Avatar from 'boring-avatars';
@@ -63,8 +64,7 @@ const PostCard = ({ post }) => {
 const Postcard = () => {
   const [allPosts, setAllPosts] = useState([]);
 
-  // eslint-disable-next-line no-unused-vars
-  const { loading, data } = useQuery(ALL_POSTS, {
+  useQuery(ALL_POSTS, {
     onCompleted: (data) => {
       setAllPosts(data.allPosts);
     },
@@ -78,5 +78,6 @@ const Postcard = () => {
     </>
   );
 };
+
 
 export default Postcard;

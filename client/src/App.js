@@ -5,12 +5,11 @@ import LandingPage from './components/Landingpage';
 import { Routes, Route, } from 'react-router-dom';
 
 
-
 function App() {
 
   return (
         <div className='flex flex-col h-screen'>
-  
+
           <Routes>
             <Route path='/' element={<LandingPage/>} />
             <Route path='/home' element={<Homepage/>}/>
