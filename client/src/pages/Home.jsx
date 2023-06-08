@@ -8,8 +8,8 @@ export default function Test () {
     return (
         <>
         <Nav />
-        <Postcard />
         <Postform />
+        <Postcard />
         <Footer />
         </>
     );
