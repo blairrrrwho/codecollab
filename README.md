@@ -1,9 +1,9 @@
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# <Your-Project-Title>
+# CodeCollab
 
 ## Description
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+Bootcamp Continuation Blog:
 
 - What was your motivation?
 - Why did you build this project? 
@@ -15,6 +15,7 @@ Provide a short description explaining the what, why, and how of your project. U
 - [Installation](#installation)
 - [Usage](#usage)
 - [Deployment](#deployment)
+- [Screenshot](#screenshot)
 - [Features](#features)
 - [Technologies](#technologies)
 - [License](#license)
@@ -25,32 +26,33 @@ Provide a short description explaining the what, why, and how of your project. U
 
 
 ## Installation
-No installation required -- this is a web-based application
+To install simply clone the repo down to your local machine. In the CLI in the relative directory, run 'npm i' at the root to get all dependancies required for sucessful download of packages.  Finally run 'npm run seed' to seed the db with default data, followed by an npm start.
 
 
 ## Usage (Instructions/How-To Use)
-Provide instructions and examples for use. Include screenshots as needed.
+To use the package as a consumer, simply visit the deployed link and create an account. After signing up, You can create blog posts by filling out the blog form on the home page. 
 
-To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+To use the package as a Developer, after following the installation steps above, at the root of the project directory run command 'npm start' or 'npm run develop' in your CLI, and React will open the website in your browser.
 
 
 ## Deployment
 Live URL: <a href="deployed link">Deployment Link</a>
-<!-- in the parentheses is just the relative path to the screenshot-->
+
+
+## Screenshot
 ![alt text](assets/images/screenshot.png)
 
 
 ## Features
-If your project has a lot of features, list them here.
+Our project features the following npm packages:  
+jsonwebtoken, jwt-decode, bcrypt, apollo-server-express, @apollo/react-hooks, react-router-dom
 
 
 ## Technologies
-JavaScript, HTML, CSS, Node.js, Express.js, MySQL, Java, C, C#, C++, Python, Other, N/A
+JavaScript, HTML, CSS, Node.js, Express.js, Apollo Server, GraphQL, MongoDB, Mongoose, React, Tailwind
 
 
 ## License
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
 This project is licensed under the MIT license. For more information about this license and what it entails, visit the MIT website <a href="https://opensource.org/licenses/MIT">here</a>
 
 Preview:
@@ -82,11 +84,15 @@ If you created an application or package and would like other developers to cont
 
 
 ## Contact / Questions
-If you liked this project and want to see more, feel free to check out my other repos [here](https://github.com/blairrrrwho).  
-For any questions or inquiries, you can reach me at blair10324@gmail.com for further information.    
+If you liked this project and want to see more, feel free to check out our other repos by clickin on the developer's name at the bottom. 
+For any questions or inquiries, you can reach us individually by email.
 
-
+<li><strong><a href="https://github.com/cbarnes0" target="_blank">Carson Barnes</a>:</strong> Full-Stack Developer</li>  
+<li><strong><a href="https://github.com/AaronDreyer" target="_blank">Aaron Dreyer</a>:</strong> Full-Stack Developer</li>  
+<li><strong><a href="https://github.com/wkerby" target="_blank">William Kerby</a>:</strong> Full-Stack Developer</li>  
+<li><strong><a href="https://github.com/tlequernaque" target="_blank">Terry Laquernaque</a>:</strong> Full-Stack Developer</li>  
+<li><strong><a href="https://github.com/alc0ve" target="_blank">Christina hall</a>:</strong> Full-Stack Developer</li>  
 <li><strong><a href="https://github.com/blairrrrwho" target="_blank">Blair Millet</a>:</strong> Full-Stack Developer</li>  
 
 - - - - 
-© 2023 Another Bad Music Review, Inc. All Rights Reserved.
+© 2023 CodeCollab, Inc. All Rights Reserved.
