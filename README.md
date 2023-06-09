@@ -36,7 +36,7 @@ To use the package as a Developer, after following the installation steps above,
 
 
 ## Deployment
-Live URL: <a href="deployed link">Deployment Link</a>
+Live URL: <a href="https://codecollab-for-developers.herokuapp.com/">CodeCollab</a>
 
 
 ## Screenshot
