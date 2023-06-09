@@ -34,14 +34,18 @@ const Nav = () => {
                         ))
                     } */}
                     {/* User profile icon */}
-                    <div className="flex flex-col items-center text-3xl m-1 mt-2 text-gray-800 hover:text-amber-500 hover:cursor-pointer">
-                    <ion-icon name="person-circle-outline"></ion-icon>
-                    <p className="text-gray-800 text-xs font-[Monospace]">Profile</p>
-                    </div>
-
-                    <button className='bg-rose-700 text-white font-[Monospace] py-2 px-6 rounded md:ml-8 hover:bg-amber-500
-                    duration-500 mr-8 md:ml-8 md:mr-0' onClick={Auth.logout}>Logout
-                    </button>
+                    <li className="md:flex-shrink-0 flex flex-col items-center md:flex-row md:items-center text-3xl m-1 mt-2 text-gray-800 hover:text-amber-500 hover:cursor-pointer">
+                        <div className="flex flex-col items-center">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <p className="text-gray-800 text-xs font-[Monospace]">Profile</p>
+                        </div>
+                    </li>
+                    {/* Logout */}
+                    <li className="md:flex-shrink-0 flex justify-center items-center md:justify-start md:items-start mt-4 md:mt-0">
+                        <button className='bg-rose-700 text-white font-[Monospace] py-2 px-6 rounded md:ml-2 md:mr-8 hover:bg-amber-500
+                    duration-500' onClick={Auth.logout}>Logout
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
