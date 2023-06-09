@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import SignUp from './SignUp';
 import Login from './Login'; 
-import cardImage from './imgs/placeholder.png';
-
-
 
 export default function LandingPage() {
-
   const [showModal, setShowModal] = useState(false);
   const [formType, setFormType] = useState('login');
 
@@ -20,40 +16,31 @@ export default function LandingPage() {
   };
 
   return (
-
-    <div className="w-full h-screen bg-yellow-500">
-      <div className="h-screen flex items-center justify-center">
-        <div className="h-5/6 w-5/6 rounded-lg overflow-hidden shadow-2xl shadow-black bg-white">
-          <img className="mt-4 mx-auto" src={cardImage} alt="Test" />
-          <div className="px-6 py-4 flex flex-col justify-center items-center">
-            <div className="font-bold text-xl mb-2">
-              <div className='font-bold text-2xl cursor-pointer flex items-center font-[Monospace]
-            text-gray-800'>
-                <span className='text-3xl text-yellow-500 mr-1 pt-2'>
-                  <ion-icon name="code-outline"></ion-icon>
-                </span>
-                CodeCollab
-              </div>
+    <div className="relative h-screen overflow-hidden bg-gradient-to-b from-yellow-200 to-yellow-300">
+      <div className="absolute inset-0 bg-cover bg-blur"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-white/75"></div>
+      <div className="relative z-10 flex flex-col justify-center items-center h-full">
+        <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
+          <div className="font-bold text-3xl mb-2">
+            <div className='font-bold text-4xl cursor-pointer flex items-center font-[Monospace] text-gray-800 shadow-md'>
+              <span className='text-3xl text-yellow-500 mr-1 pt-2'>
+                <ion-icon name="code-outline"></ion-icon>
+              </span>
+              CodeCollab
             </div>
-            <p className="text-gray-700 text-base text-center">
-              Coding is a fascinating and transformative skill that has revolutionized the way we live and interact with technology. At its core, coding is the art of instructing computers to perform specific tasks through the use of programming languages. It is a language of logic and problem-solving, where creativity meets precision.
-              <br></br>
-              <br></br>
-              One of the most remarkable aspects of coding is its ability to empower individuals to bring their ideas to life. With a few lines of code, one can create websites, mobile applications, video games, artificial intelligence systems, and much more. Coding opens up a world of endless possibilities, enabling innovation and pushing the boundaries of what is possible.
-              <br></br>
-              <br></br>
-              The process of coding requires a unique mindset. It demands attention to detail, patience, and a willingness to tackle challenges head-on. It involves breaking down complex problems into smaller, more manageable components and designing elegant solutions. Coding is like solving a puzzle, where every line of code contributes to the bigger picture.
-            </p>
           </div>
-          <div className="py-4 flex justify-center">
-          <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          <p className="text-gray-700 text-lg text-center mx-auto mb-6">
+            Welcome to our blog, a vibrant online community where software developers come together to share their thoughts and valuable resources. Whether you're an experienced coder, a passionate newbie, or somewhere in between, our platform offers a space for you to connect with like-minded individuals, exchange ideas, and expand your knowledge in the ever-evolving world of software development. We strive to foster an environment that encourages collaboration, learning, and professional growth. So, join us on this exciting journey as we dive into the latest trends, best practices, and innovative solutions, all while building a strong community of developers who are dedicated to pushing the boundaries of technology.
+          </p>
+          <div className="flex justify-center">
+            <button
+              className="bg-rose-700 hover:bg-amber-500 text-white font-bold py-2 px-6 rounded-md focus:outline-none focus:shadow-outline mr-4"
               onClick={() => openModal('login')}
             >
               Login
             </button>
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-4"
+              className="bg-rose-700 hover:bg-amber-500 text-white font-bold py-2 px-6 rounded-md focus:outline-none focus:shadow-outline"
               onClick={() => openModal('signup')}
             >
               Sign Up
@@ -61,10 +48,9 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-
       {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-opacity-50 bg-black">
+        <div className={`fixed inset-0 flex items-center justify-center bg-opacity-50 bg-black transition-opacity duration-300 ${showModal ? 'opacity-100' : 'opacity-0'}`}>
           <div className="bg-white rounded-lg shadow-lg">
             <div className="flex justify-end px-6 py-4">
               <button
@@ -82,9 +68,5 @@ export default function LandingPage() {
         </div>
       )}
     </div>
-          
   );
 }
-
-
-
