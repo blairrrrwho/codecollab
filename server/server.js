@@ -8,7 +8,7 @@ const { typeDefs, resolvers } = require('./schemas');
 
 const cwd = process.cwd();
 
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
   typeDefs,
