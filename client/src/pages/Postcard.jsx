@@ -47,10 +47,15 @@ const PostCard = ({ post }) => {
         <div className="mt-16">
           <p>{expanded ? post.postText : truncatedArticle}</p>
           <div className="flex flex-row justify-between">
-            <p className="mt-16 text-gray-400">{readingTime} minute read</p>
-            <p className="mt-16 text-extrabold underline cursor-pointer hover:text-gray-400" onClick={toggleExpand}>
-              {expanded ? 'X' : 'EXPAND'}
-            </p>
+            <div>
+              <p className="mt-16 text-gray-400">{readingTime} minute read</p>
+              <p className="text-xs text-gray-400">{post.createdAt}</p>
+            </div>
+            <div>
+              <p className="mt-16 text-extrabold underline cursor-pointer hover:text-gray-400" onClick={toggleExpand}>
+                {expanded ? 'X' : 'EXPAND'}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -58,8 +63,6 @@ const PostCard = ({ post }) => {
   );
 };
 
-// This is to have the expand feature be unique to each card without causing
-// issues with react hooks. 
 const Postcard = () => {
   const [allPosts, setAllPosts] = useState([]);
 
