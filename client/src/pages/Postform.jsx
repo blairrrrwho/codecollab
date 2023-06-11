@@ -47,7 +47,7 @@ const Postform = () => {
 
 
   return (
-    <div className="bg-yellow-800 flex items-center justify-center h-screen">
+    <div className="bg-amber-500/60 flex items-center justify-center h-screen">
       <div className="mb-16 mt-32 bg-gradient-to-b from-white from-50% to-yellow-100 drop-shadow-sm w-full p-6 bg-white rounded-md shadow-xl mx-4 md:mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl">
         <h1 className="text-2xl font-semibold text-center text-yellow-700 font-[Monospace]">
           Please share your thoughts or resources :)

@@ -19,7 +19,7 @@ export default function LandingPage() {
   return (
     <div className="bg-gradient-to-b from-amber-800 via-yellow-500 to-orange-400 min-h-screen h-screen">
       <div className="flex flex-col h-screen items-center justify-center">
-        <div className="absolute top-0 left-0 m-6 flex items-center text-yellow-200 text-3xl font-bold font-[Monospace] text-gray-800">
+        <div className="absolute top-0 left-0 m-6 flex items-center text-yellow-200 text-2xl font-bold font-[Monospace] text-gray-800">
           <span className="text-3xl mr-1 pt-2">
             <ion-icon name="code-outline"></ion-icon>
           </span>
