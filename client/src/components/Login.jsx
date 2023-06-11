@@ -47,15 +47,15 @@ export default function LoginForm() {
 	return (
 		<>
 
-			<form className="flex flex-col bg-white rounded shadow-lg p-12 mt-12" noValidate={validated} onSubmit={handleFormSubmit}>
-
+			<form className="flex flex-col bg-white rounded p-4 sm:p-8" noValidate={validated} onSubmit={handleFormSubmit}>
+				<h1 class="font-bold text-gray-700 text-2xl mb-4">Welcome back! :)</h1>
 				<div className="mb-4">
-					<label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+					<label className="text-gray-700 text-sm font-semibold" htmlFor="email">
 						Email
-						<span className="text-red-500 text-xs italic">*</span>
+						<span className="text-red-500 text-xs">*</span>
 					</label>
 					<input
-						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
 						id="email"
 						type="text"
 						placeholder="Your email"
@@ -67,27 +67,26 @@ export default function LoginForm() {
 					{/* <p className="text-red-500 text-xs italic">Email is required!</p> */}
 				</div>
 
-				<div className="mb-6">
-					<label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+				<div className="mt-3">
+					<label className="text-gray-700 text-sm font-semibold" htmlFor="password">
 						Password
-						<span className="text-red-500 text-xs italic">*</span>
+						<span className="text-red-500 text-xs">*</span>
 					</label>
 					<input
-						className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+						className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
 						id="password"
 						type="password"
-						placeholder="******************"
+						placeholder="**************"
 						name="password"
 						onChange={handleInputChange}
 						value={userFormData.password}
 						required
 					/>
-					{/* <p className="text-red-500 text-xs italic">Password is required!</p> */}
 				</div>
 
-				<div className="flex items-center justify-between">
+				<div className="">
 					<button
-						className="x items-center justify-center h-12 px-6 w-64 bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700"
+						className="flex items-center justify-center h-12 px-6 w-64 bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700"
 						type="submit"
 					>
 						Login
