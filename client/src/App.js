@@ -5,7 +5,7 @@ import './App.css';
 // import Footer from './components/Footer';
 // import Postform from './components/Postform';
 import Home from './pages/Home'
-import LandingPage from './components/Landingpage';
+import LandingPageIdeally from './components/Landingpageideally';
 import { Routes, Route, } from 'react-router-dom';
 
 
@@ -15,7 +15,7 @@ function App() {
         <div className='flex flex-col h-screen'>
       
           <Routes>
-            <Route path='/' element={<LandingPage/>} />
+            <Route path='/' element={<LandingPageIdeally/>} />
             <Route path='/home' element={<Home/>}/>
           </Routes>
    
