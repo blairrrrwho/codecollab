@@ -17,21 +17,21 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-orange-500 via-yellow-500 to-orange-400 min-h-screen h-screen">
+    <div className="bg-gradient-to-b from-amber-800 via-yellow-500 to-orange-400 min-h-screen h-screen">
       <div className="flex flex-col h-screen items-center justify-center">
-        <div className="absolute top-0 left-0 m-6 flex items-center font-[Monospace] text-gray-800">
+        <div className="absolute top-0 left-0 m-6 flex items-center text-yellow-200 text-3xl font-bold font-[Monospace] text-gray-800">
           <span className="text-3xl mr-1 pt-2">
             <ion-icon name="code-outline"></ion-icon>
           </span>
-          <span className="text-3xl">CodeCollab</span>
+          CodeCollab
         </div>
-        <div className="flex flex-col m-2 sm:m-16 md:m-32 lg:m-64 rounded-lg border-double border-4 border-gray-600/20 bg-gray-300/20 shadow-2xl relative shadow-gray-900 m-auto pt-12 flex-shrink-0">
+        <div className="flex flex-col m-2 sm:m-16 md:m-32 lg:m-64 rounded-lg border-double border-4 border-gray-500 bg-gray-300/50 shadow-2xl relative shadow-gray-900 m-auto pt-12 flex-shrink-0">
           <div className="flex p-2 mt-8 mx-6 justify-center text-gray-700 text-center font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-            Insert witty short slogan here
+            Code. Collaborate. Create.
           </div>
           <div className="px-4 flex flex-col justify-center items-center">
             <p className="text-gray-700 text-center p-4 md:p-8 mx-2 md:mx-6">
-            Join our bootcamp blog. Connect with alumni, share resources. Create an account for curated coding content, industry insights. Inclusive community supports your journey. Discover advice, success stories, discuss trends. Join today and tap into collective knowledge.            </p>
+            Join our bootcamp blog. Connect with alumni, share resources. Create an account for curated coding content, industry insights. Inclusive community supports your journey. Discover advice, success stories, discuss trends. Join today and tap into collective knowledge.</p>
           </div>
           <div className="flex flex-col justify-center items-center sm:flex-row sm:space-x-4 mt-auto">
             <button

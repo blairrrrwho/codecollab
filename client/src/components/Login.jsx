@@ -48,7 +48,7 @@ export default function LoginForm() {
 		<>
 
 			<form className="flex flex-col bg-white rounded p-4 sm:p-8" noValidate={validated} onSubmit={handleFormSubmit}>
-				<h1 class="font-bold text-2xl mb-4">Welcome back! :)</h1>
+				<h1 class="font-bold text-gray-700 text-2xl mb-4">Welcome back! :)</h1>
 				<div className="mb-4">
 					<label className="text-gray-700 text-sm font-semibold" htmlFor="email">
 						Email
@@ -76,7 +76,7 @@ export default function LoginForm() {
 						className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
 						id="password"
 						type="password"
-						placeholder="******************"
+						placeholder="**************"
 						name="password"
 						onChange={handleInputChange}
 						value={userFormData.password}
