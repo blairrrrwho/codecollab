@@ -47,11 +47,12 @@ export default function LoginForm() {
 	return (
 		<>
 
-			<form noValidate={validated} onSubmit={handleFormSubmit}>
+			<form className="flex flex-col bg-white rounded shadow-lg p-12 mt-12" noValidate={validated} onSubmit={handleFormSubmit}>
 
 				<div className="mb-4">
 					<label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
 						Email
+						<span className="text-red-500 text-xs italic">*</span>
 					</label>
 					<input
 						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -63,12 +64,13 @@ export default function LoginForm() {
 						value={userFormData.email}
 						required
 					/>
-					<p className="text-red-500 text-xs italic">Email is required!</p>
+					{/* <p className="text-red-500 text-xs italic">Email is required!</p> */}
 				</div>
 
 				<div className="mb-6">
 					<label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
 						Password
+						<span className="text-red-500 text-xs italic">*</span>
 					</label>
 					<input
 						className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -80,22 +82,24 @@ export default function LoginForm() {
 						value={userFormData.password}
 						required
 					/>
-					<p className="text-red-500 text-xs italic">Password is required!</p>
+					{/* <p className="text-red-500 text-xs italic">Password is required!</p> */}
 				</div>
 
 				<div className="flex items-center justify-between">
 					<button
-						className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+						className="x items-center justify-center h-12 px-6 w-64 bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700"
 						type="submit"
 					>
-						Submit
+						Login
 					</button>
+					<div className="flex mt-6 justify-center text-xs">
 					<a
-						className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+						className="text-blue-400 hover:text-blue-500"
 						href="/"
 					>
 						Forgot Password?
 					</a>
+					</div>
 				</div>
 			</form>
 
