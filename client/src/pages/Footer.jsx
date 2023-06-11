@@ -38,7 +38,60 @@ export default function Footer() {
                 Our Developers
               </h2>
               <ul className="space-y-4 text-center">
-                {/* Developers list */}
+              <li className='flex items-center justify-center space-x-4'>
+                                <p>Carson Barnes</p>
+                                <a href="https://github.com/cbarnes0" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                                <a href="https://www.linkedin.com/in/cb019803/" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </a>
+                            </li>
+                            <li className='flex items-center justify-center space-x-4'>
+                                <p>Aaron Dreyer</p>
+                                <a href="https://github.com/AaronDreyer" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                                <a href="https://www.linkedin.com/in/aarondreyer/" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </a>
+                            </li>
+                            <li className='flex items-center justify-center space-x-4'>
+                                <p>Christina Hall</p>
+                                <a href="https://github.com/alc0ve" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                                <a href="https://www.linkedin.com/in/christina-h-05361b25b/" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </a>
+                            </li>
+                            <li className='flex items-center justify-center space-x-4'>
+                                <p>Will Kerby</p>
+                                <a href="https://github.com/wkerby" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                                <a href="https://www.linkedin.com/in/william-kerby-5b4267127/" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </a>
+                            </li>
+                            <li className='flex items-center justify-center space-x-4'>
+                                <p>Terry Lequernaque</p>
+                                <a href="https://github.com/tlequernaque" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                                <a href="https://www.linkedin.com/in/terry-lequernaque-654158274/" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </a>
+                            </li>
+                            <li className='flex items-center justify-center space-x-4'>
+                                <p>Blair Millet</p>
+                                <a href="https://github.com/blairrrrwho" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                                <a href="https://www.linkedin.com/in/blair-millet/" target="_blank" className="text-gray-500 hover:text-yellow-500 text-3xl">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </a>
+                            </li>
               </ul>
               <button
                 className="bg-gray-600 text-white px-4 py-2 rounded mt-4 w-full hover:bg-yellow-500"
