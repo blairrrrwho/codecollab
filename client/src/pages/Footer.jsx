@@ -18,10 +18,6 @@ export default function Footer() {
                 <div className='text-2xl m-1 mt-2'>
                     <ion-icon name="heart-outline"></ion-icon>
                 </div>
-                <p className='text-xl'>-</p>
-                <div className='text-2xl m-1 mt-2'>
-                    <ion-icon name="logo-github"></ion-icon>
-                </div>
             </div>
             <div className='cursor-pointer flex items-center mr-4 ml-auto z-10' onClick={openModal}>
                 <div className='text-2xl mt-1'>
