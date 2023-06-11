@@ -51,7 +51,7 @@ export default function SignupForm() {
 
   return (
     <>
-      <form noValidate={validated} onSubmit={handleFormSubmit}>
+      <form className="flex flex-col bg-white rounded p-4 sm:p-8" noValidate={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         {showAlert && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
@@ -73,12 +73,15 @@ export default function SignupForm() {
           </div>
         )}
 
+        <h1 class="font-bold text-gray-700 text-2xl mb-4">Welcome! :)</h1>
+        <p className="text-gray-700 text-xs mb-4">We are thrilled you're here. Join to post and see other posts!</p>
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+          <label className="text-gray-700 text-sm font-semibold" htmlFor="username">
             First Name
+            <span className="text-red-500 text-xs">*</span>
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
             id="firstname"
             type="text"
             placeholder="Your first name"
@@ -87,15 +90,15 @@ export default function SignupForm() {
             value={userFormData.firstname}
             required
           />
-          <p className="text-red-500 text-xs italic">First Name is required!</p>
         </div>
 
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+        <div className="mt-2">
+          <label className="text-gray-700 text-sm font-semibold" htmlFor="username">
             Last Name
+            <span className="text-red-500 text-xs">*</span>
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
             id="lastname"
             type="text"
             placeholder="Your last name"
@@ -104,15 +107,15 @@ export default function SignupForm() {
             value={userFormData.lastname}
             required
           />
-          <p className="text-red-500 text-xs italic">Last Name is required!</p>
         </div>
 
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+        <div className="mt-2">
+          <label className="text-gray-700 text-sm font-semibold" htmlFor="username">
             Username
+            <span className="text-red-500 text-xs">*</span>
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
             id="username"
             type="text"
             placeholder="Your username"
@@ -121,15 +124,15 @@ export default function SignupForm() {
             value={userFormData.username}
             required
           />
-          <p className="text-red-500 text-xs italic">Username is required!</p>
         </div>
 
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+        <div className="mt-2">
+          <label className="text-gray-700 text-sm font-semibold" htmlFor="email">
             Email
+            <span className="text-red-500 text-xs">*</span>
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
             id="email"
             type="email"
             placeholder="Your email address"
@@ -138,15 +141,15 @@ export default function SignupForm() {
             value={userFormData.email}
             required
           />
-          <p className="text-red-500 text-xs italic">Email is required!</p>
         </div>
 
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+        <div className="mt-2">
+          <label className="text-gray-700 text-sm font-semibold" htmlFor="password">
             Password
+            <span className="text-red-500 text-xs">*</span>
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
             id="password"
             type="password"
             placeholder="Your password"
@@ -155,15 +158,14 @@ export default function SignupForm() {
             value={userFormData.password}
             required
           />
-          <p className="text-red-500 text-xs italic">Password is required!</p>
         </div>
 
         <button
-          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="flex items-center justify-center h-12 px-6 bg-green-500 mt-8 hover:bg-green-700 hover:cursor-pointer text-green-100 font-semibold rounded focus:outline-none focus:shadow-outline"
           type="submit"
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
         >
-          Submit
+          Signup
         </button>
       </form>
     </>
