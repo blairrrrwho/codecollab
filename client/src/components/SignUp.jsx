@@ -74,8 +74,8 @@ export default function SignupForm() {
         )}
 
         <h1 class="font-bold text-gray-700 text-2xl mb-4">Welcome! :)</h1>
-        <p className="text-gray-700 text-xs mb-4">We are thrilled you're here. Join to post and see other posts!</p>
-        <div className="mb-4">
+        <p className="flex text-gray-700 text-sm mb-4">We are thrilled you're here. <br></br>Join to post and see other posts!</p>
+        <div className="mt-2">
           <label className="text-gray-700 text-sm font-semibold" htmlFor="username">
             First Name
             <span className="text-red-500 text-xs">*</span>
@@ -161,7 +161,7 @@ export default function SignupForm() {
         </div>
 
         <button
-          className="flex items-center justify-center h-12 px-6 bg-green-500 mt-8 hover:bg-green-700 hover:cursor-pointer text-green-100 font-semibold rounded focus:outline-none focus:shadow-outline"
+          className="flex items-center justify-center h-12 px-6 w-64 bg-green-500 mt-8 rounded font-semibold text-sm text-green-100 hover:bg-green-700 hover:cursor-pointer"
           type="submit"
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
         >

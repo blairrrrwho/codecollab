@@ -64,7 +64,6 @@ export default function LoginForm() {
 						value={userFormData.email}
 						required
 					/>
-					{/* <p className="text-red-500 text-xs italic">Email is required!</p> */}
 				</div>
 
 				<div className="mt-3">
