@@ -73,7 +73,7 @@ export default function SignupForm() {
           </div>
         )}
 
-        <h1 class="font-bold text-gray-700 text-2xl mb-4">Welcome! :)</h1>
+        <h1 className="font-bold text-gray-700 text-2xl mb-4">Welcome! :)</h1>
         <p className="flex text-gray-700 text-sm mb-4">We are thrilled you're here. <br></br>Join to post and see other posts!</p>
         <div className="mt-2">
           <label className="text-gray-700 text-sm font-semibold" htmlFor="username">
