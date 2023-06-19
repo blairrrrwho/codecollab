@@ -29,8 +29,12 @@ const resolvers = {
         },
         addPost: async (parent, { postTitle, postText, username }) => {
             const post = await Post.create({ postTitle, postText, username });
-            console.log(post);
             return post;
+        },
+        deletePostById: async (parent, { postId }) => {
+            const delPost = await Post.findOneAndDelete({ _id: postId });
+            return delPost;
+
         },
         addComment: async(parent, {postId, commentBody, username}) => {
             try {
